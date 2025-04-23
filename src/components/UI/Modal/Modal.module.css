@@ -1,0 +1,71 @@
+
+.overlay{
+  opacity: 0;
+}
+.show{
+  opacity: 1;
+}
+.createTask{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 170px;
+  border-radius: 30px;
+
+
+  border: 3px solid rgba(0, 0, 0, 0.3);
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+  /* background-color: #fff; */
+  width: 500px;
+  height: auto;
+  padding: 40px 50px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.textCreateTask{
+  height: auto;
+  max-width: 350px;
+
+  border: solid 3px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.imgCreateTask{
+  width: 40px;
+  margin: 0px auto;
+  align-items: center;
+  cursor: pointer;
+
+  position: absolute;
+  top: 15%;
+
+  margin-left: 30px;
+
+  /* border: solid saddlebrown; */
+}
+.buttonCreateTask{
+  
+  width: 90px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 50px;
+
+
+  align-items: center;
+  
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border: solid 3px rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
