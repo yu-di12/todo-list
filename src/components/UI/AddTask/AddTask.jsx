@@ -3,8 +3,27 @@ import React, { useState } from "react";
 import styles from './AddTask.module.css';
 import Modal from "../Modal/Modal";
 
-const AddTask = () => {
+const AddTask = ({tasks, setTasks}) => {
   const [open, setOpen] = useState(false);
+
+
+  const createTask = (userTask) => {
+    if (userTask) {
+      const newTask = {
+        id: Date.now(),
+        task: userTask,
+        complete: false
+      }
+      setTasks([...tasks, newTask]);
+    }
+    setOpen(false); 
+  };
+
+
+  // const hangleToggle = () => {
+
+  // }
+
 
   return (
     <div>
@@ -13,7 +32,7 @@ const AddTask = () => {
           {/* <img className={styles.imgTask} src={plus} alt="plus" /> */}
         </div>
 
-        {open && <Modal open={open} setOpen={setOpen} />}
+        {open && <Modal open={open} setOpen={setOpen} createTask={createTask}/>}
         
     </div>
   );

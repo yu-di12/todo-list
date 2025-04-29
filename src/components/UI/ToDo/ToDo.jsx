@@ -2,23 +2,20 @@ import React from "react";
 import cross from '../../../assets/images/cross.svg';
 import styles from './ToDo.module.css';
 
-const ToDo = ({todo, toggleTask, removeTask}) => {
+const ToDo = ({task, toggleTask, removeTask}) => {
 
   return (
     <div>
-      <div key={todo.id} className={styles.itemTodo}>
-        <div 
-          className={`${todo.complete ? `${styles.itemText} ${styles.strike}` : styles.itemText}`}
-          onClick={() => toggleTask(todo.id)}
-          >
-          {todo.task}
+      <div key={task.id} className={styles.itemTodo}>
+        <div
+          className={`${task.complete ? `${styles.itemText} ${styles.strike}` : styles.itemText}`}
+          onClick={() => toggleTask(task.id)}>
+          {task.task}
         </div>
-        <div 
-          className={styles.itemDelete} onClick={() => removeTask(todo.id)}>
-            <img src={cross} alt="" />
-        </div>
+        <img src={cross} alt="delete" className={styles.itemImg} onClick={() => removeTask(task.id)}/>
       </div>
     </div>
+    
   );
 };
 

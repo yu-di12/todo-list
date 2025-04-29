@@ -8,6 +8,7 @@ function App() {
       <LeftSideBar></LeftSideBar>
       <Main></Main>
     </div>
+    
   );
 }
 
